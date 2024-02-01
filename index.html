@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="task-1">
+        <h2>Задача №1</h2>
+        <h3>Создайте регулярное выражение для проверки корректности ввода email адреса.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = prompt('Введите почту');
+    alert(/\w+@\w+\.\w+/.test(string));
+    
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-1-btn">Старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-2">
+        <h2>Задача №2</h2>
+        <h3>Напишите функцию, которая заменяет все пробелы в строке на знак подчеркивания с использованием регулярных выражений.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = prompt('Введите строку');
+    alert(string.replace(/\s/g, '_'));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-2-btn">Старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-3">
+        <h2>Задача №3</h2>
+        <h3>Напишите регулярное выражение для поиска всех слов, начинающихся с определенной буквы.</h3>
+        <h4>Text:</h4><span class="task-3-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto iste non qui sunt quos, aliquam neque. Ipsa, odit autem.</span>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, autem.';
+    let a = prompt('Введите букву для поиска');
+    let res1 = new RegExp(`\\b${a}\\w{1,}\\b`, 'gi');
+    alert(string.match(res1));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-3-btn">Старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-4">
+        <h2>Задача №4</h2>
+        <h3>Создайте функцию, которая проверяет, является ли строка датой в формате "гггг-мм-дд" с использованием регулярных выражений.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = prompt('Введите строку');
+    if(string.match(/^(\d\d\d\d)-(0[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])$/)) {
+        alert('Эта строка дата в формате "гггг-мм-дд"');
+    } else {
+        alert('Эта строка НЕ в формате "гггг-мм-дд"');
+    }
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-4-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-5">
+        <h2>Задача №5</h2>
+        <h3>Напишите регулярное выражение для поиска всех слов, содержащих только латинские буквы.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string3 = prompt('Введите строку');
+    alert(string3.match(/(?<=\s|^)[a-z]+(?=\s|$)/gi));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-5-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-6">
+        <h2>Задача №6</h2>
+        <h3>Напишите регулярное выражение для поиска всех URL в тексте.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string3 = prompt('Введите текст');
+    alert(string3.match(/https?:\/\/[\w+]{1,32}\.[\w+]{1,32}[^\s@]*/g));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-6-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-7">
+        <h2>Задача №7</h2>
+        <h3>Напишите регулярное выражение для поиска всех слов, оканчивающихся на определенную букву.</h3>
+        <h4>Text:</h4><span class="task-7-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto iste non qui sunt quos, aliquam neque. Ipsa, odit autem.</span>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = document.querySelector('.task-7-text').textContent;
+    const a = prompt('Введите букву для поиска');
+    alert(string.match(new RegExp(`\\b\\w{1,}${a}\\b`, 'gi')));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-7-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-8">
+        <h2>Задача №8</h2>
+        <h3>Напишите регулярное выражение для поиска всех хэштегов в тексте.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = prompt('Введите текст');
+    alert(string.match(/#\b.[a-z]+.\b/ig));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-8-btn">старт</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
